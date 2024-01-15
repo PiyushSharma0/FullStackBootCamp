@@ -1,4 +1,7 @@
+package Assignment4;
+
 import java.util.Scanner;
+
 class Course {
     String Name;
     String CourseID;
