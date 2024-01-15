@@ -1,0 +1,7 @@
+Q1: What is the difference between HTTP & HTTPS?
+
+Q2: What is the difference between InnerHTML & InnerText?
+Q3: What is the difference between Inline CSS & Internal CSS?
+Q4: Write the code for getting Checkbox Data.
+Q5: Write the code for getting Dropdown List Data.
+Q6: What is the difference between UL & OL?

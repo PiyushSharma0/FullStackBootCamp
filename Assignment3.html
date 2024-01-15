@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment3</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 0;
+        }
+
+        h2 {
+            color: #333;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        th,
+        td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        #exampleDiv {
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        select {
+            padding: 10px;
+            width: 200px;
+        }
+
+        .list {
+            margin: 30px auto;
+            max-width: 600px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Internal CSS Example */
+        p {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Comparison between HTTP and HTTPS</h2>
+
+    <table>
+        <tr>
+            <th>Aspect</th>
+            <th>HTTP</th>
+            <th>HTTPS</th>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td>Not secure; data transmitted in plain text</td>
+            <td>Secure; data encrypted using SSL/TLS</td>
+        </tr>
+        <tr>
+            <td>Protocol</td>
+            <td>Operates over a standard and unencrypted connection (port 80)</td>
+            <td>Uses a secure and encrypted connection (port 443)</td>
+        </tr>
+        <tr>
+            <td>URL Scheme</td>
+            <td>URL starts with "http://"</td>
+            <td>URL starts with "https://"</td>
+        </tr>
+        <tr>
+            <td>Security Indicator</td>
+            <td>No visual indication in the browser</td>
+            <td>Browser displays a padlock icon or the word "Secure" in the address bar</td>
+        </tr>
+        <tr>
+            <td>Use Cases</td>
+            <td>Suitable for non-sensitive data</td>
+            <td>Essential for handling sensitive data</td>
+        </tr>
+    </table>
+
+    <div id="exampleDiv">This is <b>inner content</b>.</div>
+
+    <script>
+        var innerHTMLValue = document.getElementById('exampleDiv').innerHTML;
+        var innerTextValue = document.getElementById('exampleDiv').innerText;
+
+        console.log("innerHTML:", innerHTMLValue);
+        console.log("innerText:", innerTextValue);
+    </script>
+
+    <h2>Inline CSS vs Internal CSS</h2>
+
+    <div style="text-align: center;">
+        <!-- Inline CSS Example -->
+        <h1 style="color: red;">This is a heading</h1>
+
+        <!-- Internal CSS Example -->
+        <p>This is a paragraph with internal CSS.</p>
+    </div>
+
+    <h2>Checkbox and Dropdown Examples</h2>
+
+    <div style="text-align: center;">
+        <label>
+            <input type="checkbox" id="myCheckbox"> Check me
+        </label>
+
+        <button onclick="getCheckboxData()">Get Checkbox Data</button>
+
+        <select id="myDropdown">
+            <option value="option1">Option 1</option>
+            <option value="option2">Option 2</option>
+            <option value="option3">Option 3</option>
+        </select>
+
+        <button onclick="getDropdownData()">Get Dropdown Data</button>
+    </div>
+
+    <h2>Unordered List (UL) and Ordered List (OL)</h2>
+
+    <div class="list">
+        <!-- Unordered List (UL) Example -->
+        <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>Item 3</li>
+        </ul>
+
+        <!-- Ordered List (OL) Example -->
+        <ol>
+            <li>First</li>
+            <li>Second</li>
+            <li>Third</li>
+        </ol>
+    </div>
+    <script>
+        function getCheckboxData() {
+            var checkboxValue = document.getElementById('myCheckbox').checked;
+            alert('Checkbox is checked: ' + checkboxValue);
+        }
+
+        function getDropdownData() {
+            var dropdown = document.getElementById('myDropdown');
+            var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+            alert('Selected Option: ' + selectedValue);
+        }
+    </script>
+</body>
+
+</html>

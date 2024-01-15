@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Registration Form</title>
+    <style>
+        body {
+            background-color: #f3f3f3;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+
+        form {
+            background-color: #ffffff;
+            max-width: 400px;
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        input[type="radio"] {
+            display: inline-block;
+            width: 10%;
+            border-radius: 5px;
+        }
+
+        input[type="checkbox"] {
+            display: inline-block;
+            width: 10%;
+            border-radius: 5px;
+        }
+
+        select {
+            padding: 10px;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #009Ed9;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        input[type="submit"]:hover {
+            background-color: white;
+            color: #009Ed9;
+            border: 1px solid #009Ed9;
+            transition: ease 0.3s;
+        }
+
+    </style>
+</head>
+
+<body bgcolor="#ffff80">
+    <img src="https://www.pngitem.com/pimgs/m/146-1468479_my-profile-icon-blank-profile-picture-circle-hd.png" alt="profile" height="200px">
+
+    <h1>Login Form</h1>
+    <form action="details.html">
+        <p style="text-align: left;">Name:</p>
+        <input type="text" id="name" name="name">
+
+        <p style="text-align: left;">Gender:</p>
+        <input type="radio" id="male" name="gender" value="male">Male
+        <input type="radio" id="female" name="gender" value="female">Female
+        <input type="radio" id="other" name="gender" value="other">Other
+
+        <p style="text-align: left;">DOB:</p>
+        <input type="date" id="dob" name="dob">
+
+        <p style="text-align: left;">Password</p>
+        <input type="password" id="password" name="password">
+
+        <p style="text-align: left;">City:</p>
+        <select id="city" name="city">
+            <option value="select">Select</option>
+            <option value="bangalore">Bangalore</option>
+            <option value="hyderabad">Hyderabad</option>
+            <option value="chennai">Noida</option>
+            <option value="delhi">Delhi</option>
+            <option value="mumbai">Mumbai</option>
+            <option value="chennai">Chennai</option>
+            <option value="kolkata">Kolkata</option>
+        </select>
+
+        <p style="text-align:left">Hobbies:</p>
+        <input type="checkbox" id="reading" name="hobbies" value="reading">
+        <label for="reading">Reading</label>
+        <input type="checkbox" id="writing" name="hobbies" value="writing">
+        <label for="writing">Writing</label>
+        <input type="checkbox" id="singing" name="hobbies" value="singing">
+        <label for="singing">Singing</label>
+        <input type="checkbox" id="dancing" name="hobbies" value="dancing">
+        <label for="dancing">Dancing</label>
+        <input type="checkbox" id="cooking" name="hobbies" value="cooking">
+        <label for="cooking">Cooking</label>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

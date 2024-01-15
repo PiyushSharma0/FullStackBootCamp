@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Login</title>
+
+    <script>
+        function sameAddress(){
+            if(document.getElementById('same').checked){
+                document.getElementById('ShippingAddress').value = document.getElementById('Address').value;
+            }
+        }
+    </script>
+</head>
+<body>
+    Mailing Address: <input type="text" id="Address">
+    <br>
+    <br>
+    <input type="checkbox" id="same" onselect="sameAddress()">Same as Mailing Address
+    <br>
+    <br>
+    Shipping Address: <input type="text" id="ShippingAddress">
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Lists</title>
+    <script>
+        function populateStates() {
+            var countryDropdown = document.getElementById("country");
+            var stateDropdown = document.getElementById("state");
+            var cityDropdown = document.getElementById("city");
+
+            stateDropdown.length = 1;
+            cityDropdown.length = 1;
+
+            if (countryDropdown.value === "USA") {
+                var states = ["New York", "California", "Texas", "Florida", "Illinois"];
+                for (var i = 0; i < states.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = states[i];
+                    stateDropdown.add(option);
+                }
+            } else if (countryDropdown.value === "Canada") {
+                var states = ["Ontario", "Quebec", "British Columbia", "Alberta", "Manitoba"];
+                for (var i = 0; i < states.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = states[i];
+                    stateDropdown.add(option);
+                }
+            } else if (countryDropdown.value === "India") {
+                var states = ["Maharashtra", "Karnataka", "Tamil Nadu", "Uttar Pradesh", "Gujarat"];
+                for (var i = 0; i < states.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = states[i];
+                    stateDropdown.add(option);
+                }
+            }
+        }
+
+        function populateCities() {
+            var stateDropdown = document.getElementById("state");
+            var cityDropdown = document.getElementById("city");
+
+            cityDropdown.length = 1;
+
+            if (stateDropdown.value === "New York") {
+                var cities = ["New York City", "Buffalo"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "California") {
+                var cities = ["Los Angeles", "San Francisco"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Texas") {
+                var cities = ["Houston", "Dallas"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Florida") {
+                var cities = ["Miami", "Orlando"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Illinois") {
+                var cities = ["Chicago", "Springfield"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Ontario") {
+                var cities = ["Toronto", "Ottawa"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Quebec") {
+                var cities = ["Montreal", "Quebec City"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "British Columbia") {
+                var cities = ["Vancouver", "Victoria"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Alberta") {
+                var cities = ["Calgary", "Edmonton"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Manitoba") {
+                var cities = ["Winnipeg", "Brandon"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Maharashtra") {
+                var cities = ["Mumbai", "Pune"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Karnataka") {
+                var cities = ["Bengaluru", "Mysuru"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Tamil Nadu") {
+                var cities = ["Chennai", "Coimbatore"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Uttar Pradesh") {
+                var cities = ["Lucknow", "Agra"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            } else if (stateDropdown.value === "Gujarat") {
+                var cities = ["Ahmedabad", "Surat"];
+                for (var i = 0; i < cities.length; i++) {
+                    var option = document.createElement("option");
+                    option.text = cities[i];
+                    cityDropdown.add(option);
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h2>Dropdown Lists</h2>
+
+    <label for="country">Country:</label>
+    <select id="country" onchange="populateStates()">
+        <option value="Select Country">Select Country</option>
+        <option value="USA">USA</option>
+        <option value="Canada">Canada</option>
+        <option value="India">India</option>
+    </select>
+
+    <br><br>
+
+    <label for="state">State:</label>
+    <select id="state" onchange="populateCities()">
+        <option value="Select State">Select State</option>
+    </select>
+
+    <br><br>
+
+    <label for="city">City:</label>
+    <select id="city">
+        <option value="Select City">Select City</option>
+    </select>
+
+</body>
+
+</html>
